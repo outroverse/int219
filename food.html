@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container{
+            border: 5px red solid;
+            padding: 40px;
+            height: 500px;
+            display: grid;
+            grid-template-rows: 10% 30% auto auto auto auto auto 10%;
+            grid-template: 50px 150px 100px/ 30% 30% auto; 
+        }
+
+        .item{
+            padding: 10px;
+            border: 2px red solid;
+        }
+
+        #i1{
+            text-align: center;
+            grid-row-start: 1;
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+
+        #i2{
+            text-align: center;
+            grid-row-start: 2;
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+
+        #i6{
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+
+        #i8{
+            text-align: center;
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item" id="i1">Famous Dishes of India</div>
+        <div class="item" id="i2">
+            <figcaption>Dosa</figcaption>
+            <img src="https://images.unsplash.com/photo-1668236499396-a62d2d1cb0cf?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZG9zYXxlbnwwfHwwfHx8MA%3D%3D" alt="" height="100px">
+        </div>
+        <div class="item" id="i3">Chole Bhature</div>
+        <div class="item" id="i4">Maki Ki Roti</div>
+        <div class="item" id="i5">Daal Chawal</div>
+        <div class="item" id="i6">Kachori</div>
+        <div class="item" id="i7">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia blanditiis, aperiam corporis odio quibusdam architecto quidem?</div>
+        <div class="item" id="i8">Footer</div>
+    </div>
+</body>
+</html>

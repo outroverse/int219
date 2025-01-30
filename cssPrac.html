@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cssBasics</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Type Selector (ctrl+/)*/
+        h1{
+            color: orange;
+        }
+
+        h2{
+            color: green;
+            background-color: pink;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            text-align: center;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        p{
+            color: green;
+        }
+
+        /* Type selector for specific element */
+        a[href="formPrac.html"]{
+            background-color: yellow;
+            color: red;
+        }
+
+        /* Attribute selector */
+        #p1{
+            color: aquamarine;
+            background-color: maroon;
+        }
+
+        /* Class selector */
+        .c1{
+            color: white;
+            background-color: black;
+            font-family: monospace;
+        }
+
+        /* Universal selector */
+        *{
+            font-style: italic;
+        }
+
+        /* Pseudo selector ->mouse hover, links visited etc. */
+        
+        /* Combinator selector */
+        .d1 p{
+            color: orangered;
+        }
+
+        h3,h4{
+            background-color: gray;
+        }
+    </style>
+    
+</head>
+<body>
+    <!-- Types of selectors in CSS -> type, attribute, id, class, universal, psuedo, combination 
+    Precedence order : Inline > Not internal or external but the order of <link> matters if it's after <style> then external is considered but if it's before <style> then internal css is considered, so whatver comes later is considered. -->
+
+    <h1>Front-End Class</h1> <!-- Inline: style="color: green;" -->
+    <h2>Learning CSS and Javascript</h2>
+    <h3>Learning CSS and Javascript</h3>
+    <h4 class="c1">Learning CSS and Javascript</h4>
+    <h5 class="c1">Learning CSS and Javascript</h5>
+    <h6 class="c1">Learning CSS and Javascript</h6>
+
+    <!-- id has to be unique-->
+    <p id="p1">Paragraph one</p>
+    <p>Paragraph two</p>
+
+    <a href="formPrac.html">HTML Forms</a><br>
+    <a href="tablePrac.html">HTML Tables</a>
+
+    <div class="d1">
+        <p>Paragraph inside div</p> <!-- either add id or use combination selector, this p is the child of div-->
+    </div>
+    <p>Paragraph outside div</p>
+</body>
+</html>

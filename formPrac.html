@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <h1>Form :-</h1>
+    <form action="" method="post"> <!-- default was get, with which all details were in the url but with post notung wud be shwon -->
+    <label for="uname">Enter name:</label>
+    <input type="text" name="uname" id="uname" size="30" maxlength="5" placeholder="Enter your name" value="Riya" required> <!--size inc the size of textbox,value is what by default will be there, maxlength is the numbers of letters that fit -->
+
+    <br><br>
+
+    <label for="pass">Enter password: </label>
+    <input type="password" name="pass" id="pass" placeholder="Enter password" required>
+
+    <br><br>
+
+    <label for="em">Enter email: </label>
+    <input type="email" name="em" id="em" placeholder="Type email" required> <!-- type="email" makes '@' MANDATORY-->
+
+    <br><br>
+
+    <label for="review">Write a review: </label><br>
+    <textarea name="review" id="review" rows="9" cols="40">This is a good movie</textarea>
+
+    <br><br>
+
+    <label for="lang">Choose the language you want:</label>
+    <input type="checkbox" name="lang" id="hin" value="hindi">
+        <label for="hin">Hindi</label>
+    <input type="checkbox" name="lang" id="eng" value="english" checked>
+        <label for="eng">English</label> <!-- if you're not giving any value then by default baackend saves it as "on"-->
+    <input type="checkbox" name="lang" id="fr" value="french">
+        <label for="fr">French</label>
+
+    <br><br>
+
+    <label for="gender">Select your gender: </label>
+    <input type="radio" name="gender" id="male" value="m">
+        <label for="male">Male</label>
+    <input type="radio" name="gender" id="female" value="f">
+        <label for="female">Female</label> <!-- adding a label associates the option with the radio button so that even when we click on the option(not the button) it'll check the button but the 'id' of the input and the 'for' of label must be same -->
+    <input type="radio" name="gender" id="other" value="other">
+        <label for="other">Other </label> <!-- accepts only one checked value but if there are two, then it overrides the first one and checks the second one -->
+
+    <br><br>
+
+    <label for="state-sel">Choose your state: </label><br>
+    <select name="state-sel" id="state-sel" size="3" multiple> <!-- size shows number of values that are displayed-->
+        <option value="choose">Choose your state:</option>
+        <option value="punj">Punjab</option>
+        <option value="raj">Rajasthan</option>
+        <option value="hp" selected>Himachal Pradesh</option>
+        <option value="mp">Madhya Pradesh</option>
+    </select>
+
+    <br><br>
+
+    <label for="chfile">Choose file</label>
+    <input type="file" name="chfile" id="chfile" accept="image/*"> <!-- can add required here too-->
+
+    <br><br>
+
+    <input type="submit" name="submi" id="submi" value="Click here to submit">
+    <input type="reset" name="res" id="res" value="Click here to reset"> <!-- by default the value is reset but if u add an empty value attribute then the button will display no text-->
+    <input type="image" name="imgbtn" value="imgbtn" src="image.jpg" width="100" height="30"> <!-- by default acts as the submit button, but if u want to make it as reset button then js is used, for alignment with elements css is used -->
+    </form>
+</body>
+</html>
